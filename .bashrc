@@ -46,3 +46,4 @@ export HISTTIMEFORMAT="%F %T "
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 alias config='/usr/bin/git --git-dir=/Users/shxi/.cfg/ --work-tree=/Users/shxi'
+set -o vi

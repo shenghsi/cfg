@@ -5,18 +5,20 @@
 call plug#begin('~/.vim/plugged')
 Plug 'captbaritone/molokai'
 Plug 'tpope/vim-fugitive'
-"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 " Initialize plugin system
 call plug#end()
 
-"let NERDTreeMinimalUI = 1
-"let NERDTreeDirArrows = 1
-"let NERDTreeAutoDeleteBuffer = 1
-""let NERDTreeQuitOnOpen = 1
-""Automatically quit vim if NERDTree is last and only buffer
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeNodeDelimiter = "\u00a0"
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeAutoDeleteBuffer = 1
+" quit nerdtree when open a file
+"let NERDTreeQuitOnOpen = 1
+"Automatically quit vim if NERDTree is last and only buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "" vundle begin
 "set nocompatible              " be iMproved, required
@@ -324,6 +326,10 @@ let g:netrw_winsize = 15
 "  autocmd VimEnter * :Vexplore
 "augroup END
 
+"Searching for slash as normal text
+command! -nargs=1 Ss let @/ = <q-args>
+"Searching for all characters as normal text
+command! -nargs=1 SS let @/ = '\V'.escape(<q-args>, '\')
 
 "------------------------------------------------------------
 " Mappings 
@@ -349,7 +355,7 @@ noremap <Leader>v :r !pbpaste<CR><CR>
 "pbcopy with xclip -i -sel c or xsel -i -b
 "pbpaste using xclip -o -sel -c or xsel -o -b
 
-" keep only the current window
+" close other windows, keep only the current window
 nmap <Leader>o :only<CR>
 " close current window
 nmap <Leader>q :q<CR>
@@ -366,12 +372,15 @@ nnoremap <Leader>n :bn<CR>
 nnoremap <Leader>b :bp<CR>
 " delete current buffer without closing window
 nnoremap <Leader>d :bp\|bd #<CR>
+" show full path
+nnoremap <Leader>0 :echo expand('%:p')<CR>
 
 " Nerdtree maps
 "nnoremap <silent> <Leader>t :NERDTreeFind<CR>
-"nnoremap <Leader>f :NERDTreeToggle<Enter>
+nnoremap <Leader>f :NERDTreeToggle<Enter>
 "netrw maps
-nnoremap <Leader>f :Vexplore<Enter>
+"nnoremap <Leader>f :Vexplore<Enter>
+
 " IndentGuides maps
 nnoremap <silent> <Leader>i <Plug>IndentGuidesToggle
 
