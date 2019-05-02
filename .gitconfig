@@ -1,7 +1,0 @@
-[user]
-	email = shenghsi@gmail.com
-	name = Sheng Xi
-[diff]
-	tool = opendiff
-[core]
-	excludesfile = /Users/shxi/.gitignore_global
