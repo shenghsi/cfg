@@ -17,6 +17,9 @@ syn region log_string 	start=/'/ end=/'/ end=/$/ skip=/\\./
 syn region log_string 	start=/"/ end=/"/ skip=/\\./
 syn match log_number 	'0x[0-9a-fA-F]*'
 syn match log_number 	'\d\+'
+syn match log_ctx 	'\(\d\+\)\@<=[a-zA-Z_]*Context\|[a-zA-Z_]* ENTER'
+syn match log_ctx 	'\(\d\+\)\@<=[a-zA-Z_]*Context\|[a-zA-Z_]* EXIT'
+syn match log_term 	'\[.*\]'
 
 syn match   log_date '\c\(Jan\|Feb\|Mar\|Apr\|May\|Jun\|Jul\|Aug\|Sep\|Oct\|Nov\|Dec\) [ 0-9]\d *'
 syn match   log_date '\d\{4}-\d\d-\d\d'
@@ -28,6 +31,9 @@ hi def link log_string  String
 hi def link log_error   ErrorMsg
 hi def link log_warn 	WarningMsg
 hi def link log_number  Constant	
+hi def link log_ctx 	Type
+hi log_term 	ctermfg=196
+
 hi def link log_date 	Normal
 hi def link log_time    Normal 
 

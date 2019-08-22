@@ -1,16 +1,20 @@
+let mapleader=";"
+let maplocalleader="'"
 
+"" vundle could also be used
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
-Plug 'captbaritone/molokai'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'captbaritone/molokai'
 " Initialize plugin system
 call plug#end()
-
+""--- nerdtree
 let g:NERDTreeNodeDelimiter = "\u00a0"
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
@@ -20,56 +24,15 @@ let NERDTreeAutoDeleteBuffer = 1
 "Automatically quit vim if NERDTree is last and only buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-"" vundle begin
-"set nocompatible              " be iMproved, required
-"filetype off                  " required
-"
-"" set the runtime path to include Vundle and initialize
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-"" alternatively, pass a path where Vundle should install plugins
-""call vundle#begin('~/some/path/here')
-"
-"" let Vundle manage Vundle, required
-"Plugin 'VundleVim/Vundle.vim'
-"
-"" The following are examples of different formats supported.
-"" Keep Plugin commands between vundle#begin/end.
-"" plugin on GitHub repo
-""Plugin 'tpope/vim-fugitive'
-"" plugin from http://vim-scripts.org/vim/scripts.html
-"" Plugin 'L9'
-"" Git plugin not hosted on GitHub
-""Plugin 'git://git.wincent.com/command-t.git'
-"" git repos on your local machine (i.e. when working on your own plugin)
-""Plugin 'file:///home/gmarik/path/to/plugin'
-"" The sparkup vim script is in a subdirectory of this repo called vim.
-"" Pass the path to set the runtimepath properly.
-""Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-"" Install L9 and avoid a Naming conflict if you've already installed a
-"" different version somewhere else.
-"" Plugin 'ascenator/L9', {'name': 'newL9'}
-""Plugin 'nathanaelkane/vim-indent-guides'
-""Plugin 'taglist.vim'
-""Plugin 'TxtBrowser'
-""Bundle 'gabrielelana/vim-markdown'
-""Plugin 'Txtfmt-The-Vim-Highlighter'
-"" All of your Plugins must be added before the following line
-"call vundle#end()            " required
-
-"filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-" vundle ends
+"--- nathanaelkane/vim-indent-guides
+let indent_guides_auto_colors=0
+let g:indent_guides_enable_on_vim_startup=0
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
+hi IndentGuidesOdd ctermbg=236
+hi IndentGuidesEven ctermbg=240
+" IndentGuides maps
+nnoremap <silent> <Leader>i <Plug>IndentGuidesToggle
 
 " URL: http://vim.wikia.com/wiki/Example_vimrc
 " Authors: http://vim.wikia.com/wiki/Vim_on_Freenode
@@ -88,15 +51,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
  
-" Attempt to determine the type of a file based on its name and possibly its
-" contents. Use this to allow intelligent auto-indenting for each filetype,
-" and for plugins that are filetype specific.
-filetype indent plugin on
- 
 set background=dark
-
 colorscheme molokai
-" use Monokai terminal theme
 "colorscheme monokai
 " hemisu works with peppermint terminal theme
 "colorscheme hemisu
@@ -111,46 +67,12 @@ colorscheme molokai
 
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
-
-"make vim save and load the folding of the document each time it loads"
-""also places the cursor in the last place that it was left."
+"
+""make vim save and load the folding of the document each time it loads"
+"""also places the cursor in the last place that it was left."
 au BufWinLeave ?* mkview
 au BufWinEnter ?* silent loadview
-"autocmd BufWritePost,BufLeave,WinLeave ?* if empty(glob(expand('%:p'))) | mkview | endif
-"autocmd BufWinEnter ?* if empty(glob(expand('%:p'))) | silent loadview | endif
-"let g:skipview_files = [
-"            \ '[EXAMPLE PLUGIN BUFFER]',
-"            \ '[Vundle] Installer'
-"            \ ]
-"function! MakeViewCheck()
-"    if has('quickfix') && &buftype =~ 'nofile'
-"        " Buffer is marked as not a file
-"        return 0
-"    endif
-"    if empty(glob(expand('%:p')))
-"        " File does not exist on disk
-"        return 0
-"    endif
-"    if len($TEMP) && expand('%:p:h') == $TEMP
-"        " We're in a temp dir
-"        return 0
-"    endif
-"    if len($TMP) && expand('%:p:h') == $TMP
-"        " Also in temp dir
-"        return 0
-"    endif
-"    if index(g:skipview_files, expand('%')) >= 0
-"        " File is in skip list
-"        return 0
-"    endif
-"    return 1
-"endfunction
-"augroup vimrcAutoView
-"    autocmd!
-"    " Autosave & Load Views.
-"    autocmd BufWritePost,BufLeave,WinLeave ?* if MakeViewCheck() | mkview | endif
-"    autocmd BufWinEnter ?* if MakeViewCheck() | silent loadview | endif
-"augroup end
+
 "
 "------------------------------------------------------------
 " Must have options {{{1
@@ -206,12 +128,44 @@ set hlsearch
 set ignorecase
 set smartcase
  
+" Attempt to determine the type of a file based on its name and possibly its
+" contents. Use this to allow intelligent auto-indenting for each filetype,
+" and for plugins that are filetype specific.
+filetype indent plugin on
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+" There are four main ways to use tabs in Vim:
+" 1. Always keep 'tabstop' at 8, set 'softtabstop' and 'shiftwidth' to 4 (or 3
+" or whatever you prefer) and use 'noexpandtab'. Then Vim will use a mix of
+" tabs and spaces, but typing and will behave like a tab appears every 4
+" (or 3) characters.
+" 2. Set 'tabstop' and 'shiftwidth' to whatever you prefer and use 'expandtab'.
+" This way you will always insert spaces. The formatting will never be messed
+" up when 'tabstop' is changed.
+" 3. Set 'tabstop' and 'shiftwidth' to whatever you prefer and use a |modeline|
+" to set these values when editing the file again. Only works when using Vim
+" to edit the file.
+" 4. Always set 'tabstop' and 'shiftwidth' to the same value, and 'noexpandtab'.
+" This should then work (for initial indents only) for any tabstop setting
+" that people use. It might be nice to have tabs after the first non-blank
+" inserted as spaces if you do this though. Otherwise aligned comments will
+" be wrong when 'tabstop' is changed.
+" tabstop is about how wide a Tab is defined, while
+" softtabstop is about how far cursor moves while typing Tab .
+set shiftwidth=2
+"set tabstop=4
+set softtabstop=2
+" After the 'expandtab' option is set, all the new tab characters entered will be changed to spaces. This will not affect the existing tab characters.
+set expandtab
+ 
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
  
 " When opening a new line and no filetype-specific indenting is enabled, keep
 " the same indent as the line you're currently on. Useful for READMEs, etc.
-set autoindent
+"set autoindent
  
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
@@ -256,7 +210,7 @@ set t_vb=
 set cmdheight=2
  
 " Display line numbers on the left
-" set number
+set number
  
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
@@ -266,20 +220,7 @@ set pastetoggle=<F11>
  
  
 "------------------------------------------------------------
-" Indentation options {{{1
-"
-" Indentation settings according to personal preference.
- 
-" Indentation settings for using 4 spaces instead of tabs.
-" Do not change 'tabstop' from its default value of 8 with this setup.
-set shiftwidth=4
-set softtabstop=4
-set expandtab
- 
-" Indentation settings for using hard tabs for indent. Display tabs as
-" four characters wide.
-"set shiftwidth=4
-"set tabstop=4
+
 
 set guifont=Menlo:h14
 "set guifont=Monaco:h12
@@ -291,24 +232,9 @@ set guifont=Menlo:h14
 
 "------------------------------------------------------------
 " set filetype 
-"autocmd BufNewFile,BufRead *.md set filetype=markdown
-"au BufNewFile,BufRead *.md  setf markdown
 autocmd BufNewFile,BufRead *.md set filetype=markdown
-
-"------------------------------------------------------------
-"nathanaelkane/vim-indent-guides
-"colorscheme default
-
-let indent_guides_auto_colors = 0
-
-let g:indent_guides_enable_on_vim_startup=1
-
-let g:indent_guides_start_level=2
-
-let g:indent_guides_guide_size=1
-
-hi IndentGuidesOdd ctermbg=236
-hi IndentGuidesEven ctermbg=240
+" Open markdown files with Chrome.
+noremap <F5> :!/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome %:p<CR><CR>
 
 " Enable syntax highlighting
 syntax on
@@ -338,8 +264,6 @@ command! -nargs=1 SS let @/ = '\V'.escape(<q-args>, '\')
 " one that works in normal mode (:nmap and :nnoremap)
 " one in visual mode (:vmap and :vnoremap) 
 " Useful mappings
-let mapleader=";"
-let maplocalleader="'"
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy, which is the default
 map Y y$
  
@@ -381,9 +305,21 @@ nnoremap <Leader>f :NERDTreeToggle<Enter>
 "netrw maps
 "nnoremap <Leader>f :Vexplore<Enter>
 
-" IndentGuides maps
-nnoremap <silent> <Leader>i <Plug>IndentGuidesToggle
-
 " insert mode map, auto adding curly brace pair
-inoremap {<CR> {<CR>  <CR>}<up><right>
+inoremap {<CR> {<CR>}<up><Esc>
+inoremap st<tab> std::string 
+"inoremap <c-x> <c-x><c-]>
 
+" FINDING FILES:
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
+
+" cpp highlight
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_experimental_template_highlight = 1
