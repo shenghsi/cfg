@@ -160,6 +160,9 @@ set softtabstop=2
 " After the 'expandtab' option is set, all the new tab characters entered will be changed to spaces. This will not affect the existing tab characters.
 set expandtab
  
+filetype plugin indent on
+au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
+
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
  
