@@ -213,7 +213,7 @@ set t_vb=
 set cmdheight=2
  
 " Display line numbers on the left
-set number
+"set number
  
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
@@ -226,7 +226,10 @@ set pastetoggle=<F11>
 
 
 set guifont=Menlo:h14
-"set guifont=Monaco:h12
+"set guifont=Monaco:h
+" Make the file browser always open the current directory.
+"set browsedir=current
+set autochdir
 
 " make the setting effective immediately after saving .vimrc
 " autocmd BufWritePost $MYVIMRC source $MYVIMRC
@@ -317,7 +320,32 @@ inoremap st<tab> std::string
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
 set path+=**
+" Vim looks for a tags file in the current directory first and up and up until it finds it
+set tags=./tags,tags;
+" vim plugin for cscope
+"source ~/.vim/plugin/cscope_maps.vim
+"" add cscope support if inside a view
+if (!empty($NDE_VOB_ROOT))
+" so the tag command also searches cs tags
+"set cscopetag
+" csto=1 : searches ctags before cscope
+set csto=1
+set csprg=/usr/local/packages/cscope/bin/cscope
+" set cscopeverbose
+" avoiding  Press ENTER or type command to continue
+set nocscopeverbose
+cs add $SRCHOME/$NDE_PRODUCT/utl/cscope.out
 
+" keyboard shortcuts for Cscope queries
+nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+endif
 " Display all matching files when we tab complete
 set wildmenu
 

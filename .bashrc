@@ -17,6 +17,8 @@ export PS1="${green}\u${white}@${magenta}\t ${yellow}\w ${cyan}\$ ${end}"
 #export PS1="\[\033[35;1m\]\w\[\033[m\]\[\033[34;1m\]\$\[\033[m\] "
 #export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 
+alias buffet='echo ssh sxi8@buffet04.cc.gatech.edu; ssh sxi8@buffet04.cc.gatech.edu'
+alias clear='clear;clear;'
 alias ls='ls -GFh'
 alias cp='cp -p'
 alias es='emacs -nw'
@@ -40,6 +42,7 @@ export PATH="$PATH:$HOME/scripts"
 export PATH="$PATH:/Applications/MacVim.app/Contents/bin"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:/opt/cisco/anyconnect/bin/"
 
 #export GREP_COLOR='1;31;40'
 # use 256 color
@@ -64,5 +67,9 @@ export HISTTIMEFORMAT="%F %T "
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 alias config='/usr/bin/git --git-dir=/Users/shxi/.cfg/ --work-tree=/Users/shxi'
-set -o vi
+# use vi key binding
+#set -o vi
 alias ctags='/usr/local/bin/ctags'
+alias ctagcrs='cd has; cd src/crsagents; ctags -R --exclude=.ade_path'
+alias ctagall='cd has; cd src;  find . -name "*.hxx" -o -name ".cpp" -o -name "*.h" -o -name "*.c" | xargs ctags --c++-kinds=+p --fields=+iaS --extra=+q '
+
