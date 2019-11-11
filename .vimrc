@@ -162,6 +162,8 @@ set expandtab
  
 filetype plugin indent on
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
+"au BufNewFile,BufRead *.py set encoding=utf-8
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match Error /\s\+$/
 
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start

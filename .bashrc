@@ -72,4 +72,4 @@ alias config='/usr/bin/git --git-dir=/Users/shxi/.cfg/ --work-tree=/Users/shxi'
 alias ctags='/usr/local/bin/ctags'
 alias ctagcrs='cd has; cd src/crsagents; ctags -R --exclude=.ade_path'
 alias ctagall='cd has; cd src;  find . -name "*.hxx" -o -name ".cpp" -o -name "*.h" -o -name "*.c" | xargs ctags --c++-kinds=+p --fields=+iaS --extra=+q '
-
+alias ctagpy='ctags -R --exclude=.git --python-kinds=-i --languages=python . '
