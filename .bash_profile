@@ -13,7 +13,7 @@ source ~/.profile
 # added by Anaconda3 5.0.1 installer
 export PATH="/Applications/Anaconda/anaconda3/bin:$PATH"
 #export PYTHONPATH="/Users/shxi/omscs/CS7646/ML4T_2019Fall:/Users/shenghsi/repos/git-packages/python-binance:$PYTHONPATH"
-export PYTHONPATH="/Users/shxi/omscs/CS7646/ml4t:/Users/shenghsi/repos/git-packages/python-binance:$PYTHONPATH"
+export PYTHONPATH="$HOME/omscs/CS7646/ml4t:$HOME/repos/git-packages/python-binance:$PYTHONPATH"
 # grep with color
 export GREP_OPTIONS='--color=always'
 export GREP_COLOR='1;38'
