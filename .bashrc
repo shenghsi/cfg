@@ -66,7 +66,7 @@ export GREP_OPTIONS='--color=always'
 export HISTTIMEFORMAT="%F %T "
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-alias config='/usr/bin/git --git-dir=/Users/shxi/.cfg/ --work-tree=/Users/shxi'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # use vi key binding
 #set -o vi
 alias ctags='/usr/local/bin/ctags'
