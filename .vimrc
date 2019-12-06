@@ -1,3 +1,4 @@
+" to check where a setting expandtab is done :verbose set expandtab?
 let mapleader=";"
 let maplocalleader="'"
 
@@ -154,15 +155,22 @@ set omnifunc=syntaxcomplete#Complete
 " be wrong when 'tabstop' is changed.
 " tabstop is about how wide a Tab is defined, while
 " softtabstop is about how far cursor moves while typing Tab .
-set shiftwidth=2
-"set tabstop=4
-set softtabstop=2
-" After the 'expandtab' option is set, all the new tab characters entered will be changed to spaces. This will not affect the existing tab characters.
-set expandtab
- 
-filetype plugin indent on
+"" After the 'expandtab' option is set, all the new tab characters entered will be changed to spaces. This will not affect the existing tab characters.
+""set tabstop=4
+"set softtabstop=2 shiftwidth=2 expandtab
+
+set noexpandtab " Make sure that every file uses real tabs, not spaces
+set shiftround  " Round indent to multiple of 'shiftwidth'
+set smartindent " Do smart indenting when starting a new line
+set autoindent  " Copy indent from current line, over to the new line
+" Set the tab width
+let s:tabwidth=2
+exec 'set tabstop='    .s:tabwidth
+exec 'set shiftwidth=' .s:tabwidth
+exec 'set softtabstop='.s:tabwidth
+
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
-"au BufNewFile,BufRead *.py set encoding=utf-8
+"au BufNewFile,BufRead *.py set encoding=utf-8 "UTF-8 is the default source encoding in Python 3
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match Error /\s\+$/
 
 " Allow backspacing over autoindent, line breaks and start of insert action

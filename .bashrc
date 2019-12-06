@@ -47,6 +47,10 @@ export PYTHONPATH="$HOME/Dropbox/gatech/omscs/CS7646/ml4t:$HOME/repos/git-packag
 #export HISTTIMEFORMAT="%d/%m/%yyyy %T "
 export HISTTIMEFORMAT="%F %T "
 
+#oracle
+export AIME=/net/aimerepos/results/
+alias lsd='ls -l *.dif'
+
 # alias
 alias buffet='echo ssh sxi8@buffet04.cc.gatech.edu; ssh sxi8@buffet04.cc.gatech.edu'
 alias clear='clear;clear;'
@@ -64,8 +68,9 @@ alias textedit='open -a TextEdit'
 #alias gittree='git log --all --graph --decorate --oneline'
 #alias gitlog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen %ci %C(bold blue) <%an> %Creset' --abbrev-commit"
 alias gitlog="git log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(#005faf)[%an %cr]%Creset' --abbrev-commit" # --date=format:'%m/%d-%H:%M'"
-alias gitlogl="git log -n 20 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(#005faf)[%an %cr]%Creset' --abbrev-commit" # --date=format:'%m/%d-%H:%M'"
+alias gitlogn="git log --all  -n 20 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(#005faf)[%an %cr]%Creset' --abbrev-commit" # --date=format:'%m/%d-%H:%M'"
 alias gittree="echo git ls-tree -r master --name-only;git ls-tree -r master --name-only"
+alias gitcmt="git commit -a -m"
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
