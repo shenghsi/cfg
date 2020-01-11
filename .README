@@ -1,0 +1,4 @@
+To install all the files:
+1. download scripts/install.sh
+2. chmod scripts/install.sh
+3. run scripts/install.sh
