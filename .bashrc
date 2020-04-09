@@ -64,6 +64,7 @@ alias fg3='fg 3'
 alias fg4='fg 4'
 alias textedit='open -a TextEdit'
 
+
 #alias gittree='git log --all --graph --decorate --oneline --simplify-by-decoration'
 #alias gittree='git log --all --graph --decorate --oneline'
 #alias gitlog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen %ci %C(bold blue) <%an> %Creset' --abbrev-commit"
@@ -78,7 +79,8 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # use vi key binding
 #set -o vi
-alias ctags='/usr/local/bin/ctags'
+#alias ctags='/usr/local/bin/ctags'
+alias ctags="brew --prefix/bin/ctags"
 alias ctagcrs='cd has; cd src/crsagents; ctags -R --exclude=.ade_path'
 alias ctagall='cd has; cd src;  find . -name "*.hxx" -o -name ".cpp" -o -name "*.h" -o -name "*.c" | xargs ctags --c++-kinds=+p --fields=+iaS --extra=+q '
 alias ctagpy='ctags -R --exclude=.git --python-kinds=-i --languages=python . '
