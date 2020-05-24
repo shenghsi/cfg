@@ -160,8 +160,7 @@ set smartcase
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
-filetype indent plugin on
-
+filetype plugin indent on
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
@@ -197,7 +196,9 @@ exec 'set tabstop='    .s:tabwidth
 exec 'set shiftwidth=' .s:tabwidth
 exec 'set softtabstop='.s:tabwidth
 
-au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
+"au BufNewFile,BufRead *.py set tabstop=8 expandtab shiftwidth=4 softtabstop=4
+"au BufNewFile,BufRead *.py set tabstop=8 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
+"set listchars=tab:>-,trail:-,eol:$ list
 "au BufNewFile,BufRead *.py set encoding=utf-8 "UTF-8 is the default source encoding in Python 3
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match Error /\s\+$/
 
