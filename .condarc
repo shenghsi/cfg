@@ -1,0 +1,2 @@
+# don't activate by default
+auto_activate_base: false
