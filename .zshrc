@@ -73,12 +73,14 @@ ZSH_THEME="amuseme"
 plugins=(
 git
 iterm2
+zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
+bindkey "^[^[[C" forward-word
+bindkey "^[^[[D" backward-word
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH=/usr/local/mysql/bin:$PATH
 export PATH="$PATH:$HOME/scripts" 
