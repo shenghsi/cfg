@@ -219,7 +219,7 @@ set nostartofline
 set ruler
 
 " highlight the current line in every window and update the highlight as the cursor moves.
-:set cursorline
+set cursorline
 "hi CursorLine term=bold cterm=bold guibg=234 ctermbg=236
 
 " highlight applied only in the current window, use an autocmd
@@ -252,7 +252,8 @@ set t_vb=
 set cmdheight=2
  
 " Display line numbers on the left
-"set number
+set number
+set relativenumber
  
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
@@ -315,6 +316,9 @@ map Y y$
 " Map <C-L> (redraw screen) to also turn off search highlighting until the next search
 nnoremap <C-L> :nohl<CR>
 "nmap <Leader>nh :noh<CR>
+
+" source .vimrc
+nmap <Leader>s :source .vimrc<CR>
 
 " copy selection to system clipboard in visual mode and paste from system clipboard
 " On macOS:

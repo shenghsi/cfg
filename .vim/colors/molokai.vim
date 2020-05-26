@@ -24,7 +24,7 @@ let g:colors_name="molokai"
 
 hi Normal       ctermfg=252 ctermbg=233
 hi CursorLine               ctermbg=236   cterm=none
-hi CursorLineNr ctermfg=240 ctermbg=236   cterm=none
+hi CursorLineNr ctermfg=grey ctermbg=236   cterm=none
 hi Boolean         ctermfg=135
 hi Character       ctermfg=144
 hi Number          ctermfg=135
@@ -109,7 +109,7 @@ hi WildMenu        ctermfg=81  ctermbg=16
 hi Comment         ctermfg=75
 hi CursorColumn                ctermbg=236
 hi ColorColumn                 ctermbg=236
-hi LineNr          ctermfg=236 ctermbg=233
+hi LineNr          ctermfg=241 ctermbg=233
 hi NonText         ctermfg=59
 
 hi SpecialKey      ctermfg=59
