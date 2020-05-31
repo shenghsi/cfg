@@ -90,7 +90,11 @@ set background=dark
 " hemisu works with peppermint terminal theme
 " deus for markdown
 " molokai , monokai , hemisu , atom , github , solarized , flattened_dark , termschool , jellybeans , vividchalk , candy , distinguished
-let colorname='flattened_dark'
+if $ITERM_PROFILE == 'solarized'
+	let colorname='flattened_dark'
+else
+	let colorname='molokai'
+endif
 execute 'let g:'.colorname.'_termcolors=256'
 execute 'colorscheme '.colorname
 "autocmd BufEnter *.md colorscheme torte
