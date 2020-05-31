@@ -164,6 +164,8 @@ fg() {
         builtin fg %"$@"
     fi
 }
+#
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 #fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
