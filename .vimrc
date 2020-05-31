@@ -9,12 +9,14 @@ let maplocalleader="'"
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
+" reload .vimrc and run PlugInstall after add a new plugin
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'captbaritone/molokai'
+Plug 'gabrielelana/vim-markdown'
+Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'dense-analysis/ale'
 "Plug 'vifm/vifm'
 " Initialize plugin system
@@ -83,23 +85,18 @@ hi! SpellRare gui=undercurl guisp=magenta
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
- 
+set t_Co=256
 set background=dark
-colorscheme molokai
-"colorscheme monokai
 " hemisu works with peppermint terminal theme
-"colorscheme hemisu
-"colorscheme atom
-"colorscheme github
-"colorscheme solarized
-"colorscheme termschool
-"colorscheme jellybeans
-"colorscheme vividchalk
-"colorscheme candy
-"colorscheme distinguished
-
+" deus for markdown
+" molokai , monokai , hemisu , atom , github , solarized , flattened_dark , termschool , jellybeans , vividchalk , candy , distinguished
+let colorname='solarized'
+execute 'let g:'.colorname.'_termcolors=256'
+execute 'colorscheme '.colorname
+autocmd BufEnter *.md colorscheme torte
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
+
 "
 ""make vim save and load the folding of the document each time it loads"
 """also places the cursor in the last place that it was left."
@@ -323,7 +320,7 @@ nnoremap <C-L> :nohl<CR>
 "nmap <Leader>nh :noh<CR>
 
 " source .vimrc
-nmap <Leader>s :source .vimrc<CR>
+nmap <Leader>s :source ~/.vimrc<CR>
 
 " copy selection to system clipboard in visual mode and paste from system clipboard
 " On macOS:
@@ -397,7 +394,7 @@ endif
 " Display all matching files when we tab complete
 set wildmenu
 
-" cpp highlight
+" cpp highlight https://github.com/octol/vim-cpp-enhanced-highlight
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
