@@ -1,5 +1,7 @@
 " to check where a setting expandtab is done :verbose set expandtab?
+" global leader
 let mapleader=";"
+" leader for specific file type
 let maplocalleader="'"
 
 "" vundle could also be used
@@ -14,6 +16,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'captbaritone/molokai'
 Plug 'dense-analysis/ale'
+"Plug 'vifm/vifm'
 " Initialize plugin system
 call plug#end()
 ""--- nerdtree
@@ -21,6 +24,7 @@ let g:NERDTreeNodeDelimiter = "\u00a0"
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
+"let NERDTreeCascadeSingleChildDir = 0
 " quit nerdtree when open a file
 "let NERDTreeQuitOnOpen = 1
 "Automatically quit vim if NERDTree is last and only buffer
@@ -191,12 +195,13 @@ set shiftround  " Round indent to multiple of 'shiftwidth'
 set smartindent " Do smart indenting when starting a new line
 set autoindent  " Copy indent from current line, over to the new line
 " Set the tab width
-let s:tabwidth=2
+let s:tabwidth=4
 exec 'set tabstop='    .s:tabwidth
 exec 'set shiftwidth=' .s:tabwidth
 exec 'set softtabstop='.s:tabwidth
 
-"au BufNewFile,BufRead *.py set tabstop=8 expandtab shiftwidth=4 softtabstop=4
+" python tabstop defined in /Users/shxi/.vim/ftplugin/python.vim
+"au BufNewFile,BufRead *.java set tabstop=4 expandtab shiftwidth=4 softtabstop=4
 "au BufNewFile,BufRead *.py set tabstop=8 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
 "set listchars=tab:>-,trail:-,eol:$ list
 "au BufNewFile,BufRead *.py set encoding=utf-8 "UTF-8 is the default source encoding in Python 3
@@ -269,7 +274,7 @@ set guifont=Menlo:h14
 "set guifont=Monaco:h
 " Make the file browser always open the current directory.
 "set browsedir=current
-set autochdir
+"set autochdir
 
 " make the setting effective immediately after saving .vimrc
 " autocmd BufWritePost $MYVIMRC source $MYVIMRC

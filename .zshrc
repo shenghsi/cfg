@@ -79,8 +79,15 @@ zsh-autosuggestions
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-bindkey "^[^[[C" forward-word
-bindkey "^[^[[D" backward-word
+# use vi key binding
+#set -o vi
+# to enable option as emacs meta key: in Profiles, Keys and choose Left option Key acts as: +Esc
+#bindkey "^[^[[C" forward-word
+#bindkey "^[^[[D" backward-word
+
+# env variables
+export CS6300='/Users/shxi/omscs/CS6300'
+
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH=/usr/local/mysql/bin:$PATH
 export PATH="$PATH:$HOME/scripts" 
@@ -140,13 +147,15 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-# use vi key binding
-#set -o vi
 #alias ctags='/usr/local/bin/ctags'
 alias ctags="brew --prefix/bin/ctags"
 alias ctagcrs='cd has; cd src/crsagents; ctags -R --exclude=.ade_path'
 alias ctagall='cd has; cd src;  find . -name "*.hxx" -o -name ".cpp" -o -name "*.h" -o -name "*.c" | xargs ctags --c++-kinds=+p --fields=+iaS --extra=+q '
 alias ctagpy='ctags -R --exclude=.git --python-kinds=-i --languages=python . '
+
+#work alias
+alias workssh='ssh -C -c aes128-gcm@openssh.com shxi@slc11cbg'
+alias worksshx='ssh -YC -c aes128-gcm@openssh.com shxi@slc11cbg'
 
 fg() {
     if [[ $# -eq 1 && $1 = - ]]; then
@@ -155,6 +164,10 @@ fg() {
         builtin fg %"$@"
     fi
 }
+
+#fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # from my bash_profile
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 

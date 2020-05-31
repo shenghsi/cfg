@@ -30,6 +30,7 @@ gsettings-desktop-schemas
 gtk+3
 harfbuzz
 hicolor-icon-theme
+htop
 icu4c
 intltool
 isl

@@ -7,3 +7,5 @@
 	excludesfile = /Users/shxi/.gitignore_global
 [credential]
 	helper = osxkeychain
+[pager]
+	branch = false
