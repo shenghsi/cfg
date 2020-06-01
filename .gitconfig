@@ -5,7 +5,8 @@
 	tool = opendiff
 [core]
 	excludesfile = /Users/shxi/.gitignore_global
+	pager = less -F -X
 [credential]
 	helper = osxkeychain
-[pager]
-	branch = false
+[http]
+	sslVerify = false
