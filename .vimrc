@@ -105,6 +105,11 @@ highlight nonText ctermbg=NONE
 ""make vim save and load the folding of the document each time it loads"
 """also places the cursor in the last place that it was left."
 "https://vim.fandom.com/wiki/Make_views_automatic
+"If `options` is included in `viewoptions`,
+"vim's current working directory at the time of `makeview` is stored and loaded with `loadview`.
+"If you have vim automatically changing directories for each buffer,
+"or if you locally set the pwd, your working directory will change when you reload the file during another session.
+"This should be strongly emphasized
 set viewoptions-=options
 let g:skipview_files = [
             \ '[EXAMPLE PLUGIN BUFFER]'
@@ -325,17 +330,6 @@ syntax on
 hi Normal ctermbg=none
 au BufEnter *.txt setlocal ft=txt
 
-" customize netrw like nerdtree
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 15
-"augroup ProjectDrawer
-"  autocmd!
-"  autocmd VimEnter * :Vexplore
-"augroup END
-
 "Searching for slash as normal text
 command! -nargs=1 Ss let @/ = <q-args>
 "Searching for all characters as normal text
@@ -389,12 +383,28 @@ nnoremap <Leader>0 :echo expand('%:p')<CR>
 " Nerdtree maps
 "nnoremap <silent> <Leader>t :NERDTreeFind<CR>
 nnoremap <Leader>f :NERDTreeToggle<Enter>
+
+"" customize netrw like nerdtree
+"let g:netrw_banner = 0
+"let g:netrw_liststyle = 3
+"let g:netrw_browse_split = 4
+"let g:netrw_altv = 1
+"let g:netrw_winsize = 15
+"augroup ProjectDrawer
+"  autocmd!
+"  autocmd VimEnter * :Vexplore
+"augroup END
 "netrw maps
 "nnoremap <Leader>f :Vexplore<Enter>
 
 " insert mode map, auto adding curly brace pair
-inoremap {<CR> {<CR>}<up><Esc>
-inoremap st<tab> std::string 
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {}<Esc>i
+"inoremap {<CR> {<CR>}<up><Esc>
+"inoremap st<tab> std::string 
 "inoremap <c-x> <c-x><c-]>
 
 " FINDING FILES:
