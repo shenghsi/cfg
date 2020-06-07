@@ -97,6 +97,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/opt/cisco/anyconnect/bin/"
 
 export PYTHONPATH="$HOME/Dropbox/gatech/omscs/CS7646/ml4t:$HOME/repos/git-packages/python-binance:$PYTHONPATH"
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 
 export HISTTIMEFORMAT="%F %T "
 

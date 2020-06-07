@@ -1,3 +1,10 @@
+" references
+" Configuring Vim for Java Development
+" (
+" https://averywagar.com/posts/2018/01/configuring-vim-for-java-development/
+" Deoplete Javacomplete2 Ale Ultisnips Tagbar Ctrl-P NERD-TREE
+" )
+
 " to check where a setting expandtab is done :verbose set expandtab?
 " global leader
 let mapleader=";"
@@ -58,10 +65,27 @@ let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
 let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
 let g:ale_c_cppcheck_options = ''
 let g:ale_cpp_cppcheck_options = ''
+"let g:ale_python_pylint_options = ''
 "let g:ale_sign_error = "\ue009\ue009"
 let g:ale_sign_error = "x"
 let g:ale_sign_warning = '!'
-let g:ale_linters = {'c':['gcc','cppcheck'], 'cpp':['gcc','cppcheck']}
+
+let g:ale_fix_on_save = 1
+" fixers
+let g:ale_fixers = {
+			\  '*':[],
+			\  'c':['clang-format','uncrustify'],
+			\  'cpp':['clang-format','uncrustify'],
+			\  'python':['black', 'isort']
+			\  }
+" Setup compilers for languages, python:'pylint'
+let g:ale_linters = {
+			\  'c':['gcc','cppcheck'],
+			\  'cpp':['gcc','cppcheck'],
+			\  'python':['flake8'],
+			\  'java':['javac'],
+			\  'cs':['syntax', 'semantic', 'issues']
+			\  }
 hi! clear SpellBad
 hi! clear SpellCap
 hi! clear SpellRare
@@ -373,8 +397,8 @@ nmap <Leader>w :w<CR>
 " cursor moving maps
 nmap <Leader>h <C-w><C-w>
 " switch buffer
-nnoremap <Leader>n :bn<CR>
-nnoremap <Leader>b :bp<CR>
+noremap <leader>[ :bp<return>
+noremap <leader>] :bn<return>
 " delete current buffer without closing window
 nnoremap <Leader>d :bp\|bd #<CR>
 " show full path
@@ -398,11 +422,11 @@ nnoremap <Leader>f :NERDTreeToggle<Enter>
 "nnoremap <Leader>f :Vexplore<Enter>
 
 " insert mode map, auto adding curly brace pair
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
-inoremap { {}<Esc>i
+inoremap '' ''<Esc>i
+inoremap "" ""<Esc>i
+inoremap () ()<Esc>i
+inoremap [] []<Esc>i
+inoremap {} {}<Esc>i
 "inoremap {<CR> {<CR>}<up><Esc>
 "inoremap st<tab> std::string 
 "inoremap <c-x> <c-x><c-]>

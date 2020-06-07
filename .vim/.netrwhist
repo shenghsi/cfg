@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/shxi/.vim/plugged'
-let g:netrw_dirhist_2='/Users/shxi/omscs/CS7646/ML4T_2019Fall/abides/contributed_traders'
-let g:netrw_dirhist_3='/Users/shxi/omscs/CS7646/ML4T_2019Fall/abides'
-let g:netrw_dirhist_4='/Users/shxi/omscs/CS7646/ML4T_2019Fall/abides/agent'
-let g:netrw_dirhist_5='/Users/shxi/omscs/CS7646/ML4T_2019Fall/abides/agent/examples'
-let g:netrw_dirhist_6='/Users/shxi/omscs/CS7646/ML4T_2019Fall/abides/agent'
-let g:netrw_dirhist_7='/Users/shxi/omscs/CS7646/ml4t/abides/contributed_traders'
-let g:netrw_dirhist_8='/Users/shxi/.oh-my-zsh/themes'
-let g:netrw_dirhist_9='/Users/shxi/.vim/ftplugin'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/shxi/.vim/plugged/ale'
