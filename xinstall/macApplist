@@ -1,99 +1,99 @@
 total 0
-drwxr-xr-x   3 root  wheel    96 Sep 17  2018 Adium.app
-drwxrwxr-x   3 root  wheel    96 Jun  4 11:01 Adobe Acrobat Reader DC.app
-drwxrwxr-x@  3 shxi  admin    96 Apr 14 19:46 Android Studio.app
-drwxr-xr-x@  3 shxi  admin    96 May  8 15:17 Anki.app
-drwxr-xr-x@  3 root  wheel    96 Jun  3 12:03 App Store.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Automator.app
-drwxr-xr-x@  4 shxi  staff   128 Feb  9  2019 BlueJeans.app
-drwxr-xr-x@  3 root  wheel    96 Jun  3 12:03 Books.app
-drwxr-xr-x@  3 root  wheel    96 Jun  3 12:03 Calculator.app
-drwxr-xr-x@  3 root  wheel    96 Jun  3 12:03 Calendar.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Chess.app
-drwxr-xr-x   4 root  wheel   128 Oct 21  2019 Cisco
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Contacts.app
-drwxr-xr-x@  3 503   admin    96 Dec 23 11:08 CrashPlan.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Dashboard.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Dictionary.app
-drwxr-xr-x@  3 shxi  admin    96 Aug  7  2019 Docker.app
-drwxr-xr-x   3 shxi  admin    96 May 29 15:02 Dropbox.app
-drwxr-xr-x   3 root  wheel    96 Jun  2 09:31 EasyScreenOCR.app
-drwxr-xr-x   3 root  wheel    96 Dec 22 07:41 Evernote.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 FaceTime.app
-drwxrwxr-x   3 root  admin    96 Jun  3 12:07 Firefox.app
-drwxr-xr-x   3 root  wheel    96 Jun  3 09:20 Flow.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Font Book.app
-drwxr-xr-x@  3 shxi  admin    96 Nov 14  2018 GIMP-2.10.app
-drwxrwxr-x@  3 shxi  admin    96 May 15 17:34 Google Chrome.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Home.app
-drwxr-xr-x@  3 shxi  admin    96 May 27  2019 IINA.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Image Capture.app
-drwxr-xr-x   3 shxi  staff    96 Apr 20 14:35 Itsycal.app
-drwxr-xr-x   3 shxi  admin    96 Jun  2 10:04 JetBrains Toolbox.app
-drwxr-xr-x@  3 shxi  staff    96 Apr  9 09:53 KeePassXC.app
-drwxr-xr-x@  3 shxi  staff    96 Oct 27  2019 KeyCastr.app
-drwxrwxrwx   3 root  wheel    96 Mar  6 14:21 Kindle.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Launchpad.app
-drwxr-xr-x@  3 shxi  staff    96 Mar  7 12:53 MacDown.app
-drwxr-xr-x@  3 shxi  admin    96 Dec  5  2018 MacVim.app
-drwxr-xr-x@  3 root  wheel    96 Jun  3 12:03 Mail.app
-drwxr-xr-x@  3 root  wheel    96 Jun  3 12:03 Maps.app
-drwxr-xr-x   3 shxi  admin    96 May  1 17:29 Mathpix Snipping Tool.app
-drwxr-xr-x   3 root  admin    96 Nov 26  2019 McAfee Endpoint Security for Mac.app
-drwxr-xr-x@  3 root  wheel    96 Jun  3 12:03 Messages.app
-drwxr-xr-x   3 shxi  admin    96 Jun  1 23:19 Microsoft Edge.app
-drwxrwxr-x   3 root  wheel    96 May 20 19:32 Microsoft Excel.app
-drwxrwxr-x   3 root  wheel    96 May 19 04:55 Microsoft OneNote.app
-drwxrwxr-x   3 root  wheel    96 May 19 11:31 Microsoft Outlook.app
-drwxrwxr-x   3 root  wheel    96 May 19 05:07 Microsoft PowerPoint.app
-drwxr-xr-x   3 root  wheel    96 May 20 19:29 Microsoft Remote Desktop.app
-drwxr-xr-x   3 root  wheel    96 Jun  3 08:49 Microsoft To Do.app
-drwxrwxr-x   3 root  wheel    96 May 20 19:29 Microsoft Word.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Mission Control.app
-drwxr-xr-x@  3 shxi  admin    96 Jul 10  2018 Mos.app
-drwxr-xr-x@  3 shxi  admin    96 Apr  1 08:55 MySQLWorkbench.app
-drwxr-xr-x@  3 root  wheel    96 Jun  3 12:03 News.app
-drwxr-xr-x@  3 root  wheel    96 Jun  3 12:03 Notes.app
-drwxr-xr-x   3 root  wheel    96 Jan 17  2019 OneDrive.app
-drwxr-xr-x@  3 shxi  staff    96 May 22 09:10 Opera.app
-drwxr-xr-x   3 root  wheel    96 Sep 23  2019 Oracle Secure Global Desktop Client.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Photo Booth.app
-drwxr-xr-x@  3 root  wheel    96 Jun  3 12:03 Photos.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Preview.app
-drwxr-xr-x   3 shxi  staff    96 Apr  1 16:50 Proctortrack 2.app
-drwxr-xr-x   3 shxi  staff    96 Dec 18  2018 Proctortrack.app
-drwxr-xr-x@  3 shxi  admin    96 Oct 31  2019 PyCharm CE.app
-drwxr-xr-x   3 root  admin    96 Jul 14  2019 QtSpim.app
-drwxr-xr-x@  3 root  wheel    96 Jun  3 12:03 QuickTime Player.app
-drwxr-xr-x   3 root  admin    96 Mar 13 11:04 Ramp Multicast.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Reminders.app
-drwxr-xr-x@  3 root  wheel    96 May 28 17:43 Safari.app
-drwxr-xr-x@  4 shxi  staff   128 Jun  6 11:45 Self Service.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Siri.app
-drwxr-xr-x   3 shxi  staff    96 Mar 23 23:09 Slack.app
-drwxr-xr-x   3 root  wheel    96 Aug  2  2019 Snip.app
-drwxr-xr-x   3 shxi  staff    96 Jan 14 12:19 StarUML.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Stickies.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Stocks.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 System Preferences.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 TextEdit.app
-drwxr-xr-x   3 root  wheel    96 May 15 14:10 TextScan.app
-drwxr-xr-x   3 root  admin    96 May 29 11:09 Thunderbird.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 Time Machine.app
-drwxr-xr-x   3 shxi  admin    96 Apr 11 10:48 TurboTax Premier 2019.app
-drwxr-xr-x+ 23 root  admin   736 May 12 16:05 Utilities
-drwxr-xr-x@  3 shxi  admin    96 Sep  7  2018 VNC Viewer.app
-drwxr-xr-x@  3 shxi  staff    96 Apr 12 01:12 VNote.app
-drwxr-xr-x   3 root  admin    96 Jan 28 16:46 VirtualBox.app
-drwxr-xr-x   3 shxi  staff    96 Nov 22  2019 Visual Studio Code.app
-drwxr-xr-x   3 shxi  admin    96 May 22 22:00 Vivaldi.app
-drwxr-xr-x@  3 root  wheel    96 Mar 13 10:54 VoiceMemos.app
-drwxr-xr-x   3 root  wheel    96 May 20 09:30 WeChat.app
-drwxr-xr-x   3 root  wheel    96 Mar 12 10:12 Webull.app
-drwxr-xr-x@  3 shxi  staff    96 Jan  6  2018 Welly.app
-drwxr-xr-x   3 root  wheel    96 Sep 15  2019 Xcode.app
-drwx------@ 45 shxi  staff  1440 Mar  1  2019 fiddler-mac
-drwxr-xr-x   3 shxi  staff    96 Apr  2 07:48 iTerm.app
-drwxr-xr-x@  3 root  wheel    96 Jun  3 12:03 iTunes.app
-drwxr-xr-x   3 shxi  wheel    96 May 15 11:03 zoom.us.app
-drwxr-xr-x   3 root  wheel    96 Apr 29 09:16 东方财富.app
+Adium.app
+Adobe Acrobat Reader DC.app
+Android Studio.app
+Anki.app
+App Store.app
+Automator.app
+BlueJeans.app
+Books.app
+Calculator.app
+Calendar.app
+Chess.app
+Cisco
+Contacts.app
+CrashPlan.app
+Dashboard.app
+Dictionary.app
+Docker.app
+Dropbox.app
+EasyScreenOCR.app
+Evernote.app
+FaceTime.app
+Firefox.app
+Flow.app
+Font Book.app
+GIMP-2.10.app
+Google Chrome.app
+Home.app
+IINA.app
+Image Capture.app
+Itsycal.app
+JetBrains Toolbox.app
+KeePassXC.app
+KeyCastr.app
+Kindle.app
+Launchpad.app
+MacDown.app
+MacVim.app
+Mail.app
+Maps.app
+Mathpix Snipping Tool.app
+McAfee Endpoint Security for Mac.app
+Messages.app
+Microsoft Edge.app
+Microsoft Excel.app
+Microsoft OneNote.app
+Microsoft Outlook.app
+Microsoft PowerPoint.app
+Microsoft Remote Desktop.app
+Microsoft To Do.app
+Microsoft Word.app
+Mission Control.app
+Mos.app
+MySQLWorkbench.app
+News.app
+Notes.app
+OneDrive.app
+Opera.app
+Oracle Secure Global Desktop Client.app
+Photo Booth.app
+Photos.app
+Preview.app
+Proctortrack 2.app
+Proctortrack.app
+PyCharm CE.app
+QtSpim.app
+QuickTime Player.app
+Ramp Multicast.app
+Reminders.app
+Safari.app
+Self Service.app
+Siri.app
+Slack.app
+Snip.app
+StarUML.app
+Stickies.app
+Stocks.app
+System Preferences.app
+TextEdit.app
+TextScan.app
+Thunderbird.app
+Time Machine.app
+TurboTax Premier 2019.app
+Utilities
+VNC Viewer.app
+VNote.app
+VirtualBox.app
+Visual Studio Code.app
+Vivaldi.app
+VoiceMemos.app
+WeChat.app
+Webull.app
+Welly.app
+Xcode.app
+fiddler-mac
+iTerm.app
+iTunes.app
+zoom.us.app
+东方财富.app
