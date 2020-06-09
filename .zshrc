@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/shxi/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -96,6 +96,7 @@ export PATH="$PATH:/Applications/MacVim.app/Contents/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/opt/cisco/anyconnect/bin/"
 
+export PATH="$PATH:$HOME/Library/Python/3.7/bin"
 export PYTHONPATH="$HOME/Dropbox/gatech/omscs/CS7646/ml4t:$HOME/repos/git-packages/python-binance:$PYTHONPATH"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 
@@ -153,6 +154,8 @@ alias ctags="brew --prefix/bin/ctags"
 alias ctagcrs='cd has; cd src/crsagents; ctags -R --exclude=.ade_path'
 alias ctagall='cd has; cd src;  find . -name "*.hxx" -o -name ".cpp" -o -name "*.h" -o -name "*.c" | xargs ctags --c++-kinds=+p --fields=+iaS --extra=+q '
 alias ctagpy='ctags -R --exclude=.git --python-kinds=-i --languages=python . '
+
+alias pipup="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 
 #work alias
 alias workssh='ssh -C -c aes128-gcm@openssh.com shxi@slc11cbg'
