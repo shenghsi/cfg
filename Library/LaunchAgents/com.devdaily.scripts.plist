@@ -1,28 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-        <key>Label</key>
-        <string>com.devdaily.scripts</string>
+	<dict>
+		<key>Label</key>
+		<string>com.devdaily.scripts</string>
 
-        <key>ProgramArguments</key>
-        <array>
+		<key>ProgramArguments</key>
+		<array>
 			<string>/Users/shxi/gitforks/stock/run.sh</string>
-        </array>
+		</array>
 
-        <key>OnDemand</key>
-        <false/>
+		<key>OnDemand</key>
+		<false/>
 
-        <key>Nice</key>
-        <integer>1</integer>
+		<key>Nice</key>
+		<integer>1</integer>
+		<!--
+		<key>StartInterval</key>
+		<integer>86400</integer>
+		-->
 
-        <key>StartInterval</key>
-        <integer>86400</integer>
+		<key>StartCalendarInterval</key>
+		<!--  Weekdays are 1 - 5; Sunday is 0 and 7   -->
+		<array>
+			<dict>
+				<key>Weekday</key>
+				<integer>0</integer>
+				<key>Hour</key>
+				<integer>12</integer>
+				<key>Minute</key>
+				<integer>59</integer>
+			</dict>
+			<dict>
+				<key>Weekday</key>
+				<integer>1</integer>
+				<key>Hour</key>
+				<integer>8</integer>
+				<key>Minute</key>
+				<integer>10</integer>
+			</dict>
+			<dict>
+				<key>Weekday</key>
+				<integer>2</integer>
+				<key>Hour</key>
+				<integer>8</integer>
+				<key>Minute</key>
+				<integer>10</integer>
+			</dict>
+			<dict>
+				<key>Weekday</key>
+				<integer>3</integer>
+				<key>Hour</key>
+				<integer>8</integer>
+				<key>Minute</key>
+				<integer>10</integer>
+			</dict>
+			<dict>
+				<key>Weekday</key>
+				<integer>4</integer>
+				<key>Hour</key>
+				<integer>8</integer>
+				<key>Minute</key>
+				<integer>10</integer>
+			</dict>
+			<dict>
+				<key>Weekday</key>
+				<integer>5</integer>
+				<key>Hour</key>
+				<integer>8</integer>
+				<key>Minute</key>
+				<integer>10</integer>
+			</dict>
+		</array>
 
-        <key>StandardErrorPath</key>
-        <string>/tmp/AlTest1.err</string>
+		<key>StandardErrorPath</key>
+		<string>/tmp/scripts.err</string>
 
-        <key>StandardOutPath</key>
-        <string>/tmp/AlTest1.out</string>
-</dict>
+		<key>StandardOutPath</key>
+		<string>/tmp/scripts.out</string>
+	</dict>
 </plist>
