@@ -197,3 +197,5 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
+
+source /Users/shxi/Library/Preferences/org.dystroy.broot/launcher/bash/br

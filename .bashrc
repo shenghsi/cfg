@@ -87,3 +87,5 @@ alias ctagpy='ctags -R --exclude=.git --python-kinds=-i --languages=python . '
 
 
 
+
+source /Users/shxi/Library/Preferences/org.dystroy.broot/launcher/bash/br

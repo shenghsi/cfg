@@ -25,3 +25,5 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH=/usr/local/mysql/bin:$PATH
+
+source /Users/shxi/Library/Preferences/org.dystroy.broot/launcher/bash/br
