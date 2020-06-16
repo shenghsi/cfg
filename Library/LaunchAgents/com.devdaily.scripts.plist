@@ -4,33 +4,24 @@
 	<dict>
 		<key>Label</key>
 		<string>com.devdaily.scripts</string>
-
 		<key>ProgramArguments</key>
 		<array>
 			<string>/Users/shxi/gitforks/stock/run.sh</string>
 		</array>
 
-		<key>OnDemand</key>
+		<key>KeepAlive</key>
 		<false/>
-
+		<key>RunAtLoad</key>
+		<false/>
 		<key>Nice</key>
 		<integer>1</integer>
 		<!--
 		<key>StartInterval</key>
 		<integer>86400</integer>
 		-->
-
 		<key>StartCalendarInterval</key>
 		<!--  Weekdays are 1 - 5; Sunday is 0 and 7   -->
 		<array>
-			<dict>
-				<key>Weekday</key>
-				<integer>0</integer>
-				<key>Hour</key>
-				<integer>12</integer>
-				<key>Minute</key>
-				<integer>59</integer>
-			</dict>
 			<dict>
 				<key>Weekday</key>
 				<integer>1</integer>
