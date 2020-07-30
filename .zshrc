@@ -97,7 +97,8 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/opt/cisco/anyconnect/bin/"
 
 export PATH="$PATH:$HOME/Library/Python/3.7/bin"
-export PYTHONPATH="$HOME/Dropbox/gatech/omscs/CS7646/ml4t:$HOME/repos/git-packages/python-binance:$PYTHONPATH"
+# import package searches for packages in PYTHONPATH
+export PYTHONPATH="$HOME/gitforks/stock/:$HOME/Dropbox/gatech/omscs/CS7646/ml4t:$HOME/repos/git-packages/python-binance:$PYTHONPATH"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 
 export HISTTIMEFORMAT="%F %T "
@@ -140,8 +141,8 @@ alias textedit='open -a TextEdit'
 #alias gittree='git log --all --graph --decorate --oneline --simplify-by-decoration'
 #alias gittree='git log --all --graph --decorate --oneline'
 #alias gitlog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen %ci %C(bold blue) <%an> %Creset' --abbrev-commit"
-alias gitlog="git log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(#005faf)[%an %cr]%Creset' --abbrev-commit" # --date=format:'%m/%d-%H:%M'"
-alias gitlogn="git log --all  -n 20 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(#005faf)[%an %cr]%Creset' --abbrev-commit" # --date=format:'%m/%d-%H:%M'"
+alias gitlogall="git log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(#005faf)[%an %cr]%Creset' --abbrev-commit" # --date=format:'%m/%d-%H:%M'"
+alias gitlog="git log --all  -n 20 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(#005faf)[%an %cr]%Creset' --abbrev-commit" # --date=format:'%m/%d-%H:%M'"
 alias gittree="echo git ls-tree -r master --name-only;git ls-tree -r master --name-only"
 alias gitcmt="git commit -a -m"
 
@@ -155,11 +156,15 @@ alias ctagcrs='cd has; cd src/crsagents; ctags -R --exclude=.ade_path'
 alias ctagall='cd has; cd src;  find . -name "*.hxx" -o -name ".cpp" -o -name "*.h" -o -name "*.c" | xargs ctags --c++-kinds=+p --fields=+iaS --extra=+q '
 alias ctagpy='ctags -R --exclude=.git --python-kinds=-i --languages=python . '
 
-alias pipup="pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
+alias pipup="pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U"
 
 #work alias
 alias workssh='ssh -C -c aes128-gcm@openssh.com shxi@slc11cbg'
 alias worksshx='ssh -YC -c aes128-gcm@openssh.com shxi@slc11cbg'
+alias worksshadd='ssh-add -t 4w ~/.ssh/slc11cbg_ed25519'
+
+alias tmat 'tmux a -t'
+alias tmns 'tmux new -s'
 
 fg() {
     if [[ $# -eq 1 && $1 = - ]]; then

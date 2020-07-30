@@ -1,2 +1,3 @@
 .cfg
 .vim/view/
+__pycache__/

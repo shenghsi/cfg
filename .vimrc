@@ -76,7 +76,7 @@ let g:ale_fixers = {
 			\  '*':[],
 			\  'c':['clang-format','uncrustify'],
 			\  'cpp':['clang-format','uncrustify'],
-			\  'python':['black', 'isort']
+			\  'python':['black', 'isort', 'trim_whitespace']
 			\  }
 " Setup compilers for languages, python:'pylint'
 let g:ale_linters = {
@@ -117,7 +117,9 @@ set background=dark
 if $ITERM_PROFILE == 'solarized'
 	let colorname='flattened_dark'
 else
-	let colorname='molokai'
+	"let colorname='molokai'
+	"let colorname='gruvbox'
+	let colorname='solarized'
 endif
 execute 'let g:'.colorname.'_termcolors=256'
 execute 'colorscheme '.colorname
@@ -316,12 +318,13 @@ set t_vb=
  
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue"
-set cmdheight=2
+set cmdheight=1
  
 " Display line numbers on the left
 set number
 set relativenumber
- 
+nnoremap <Leader>n :set invrelativenumber<CR> :set invnumber<CR>
+
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
  
@@ -355,9 +358,9 @@ hi Normal ctermbg=none
 au BufEnter *.txt setlocal ft=txt
 
 "Searching for slash as normal text
-command! -nargs=1 Ss let @/ = <q-args>
+"command! -nargs=1 Ss let @/ = <q-args>
 "Searching for all characters as normal text
-command! -nargs=1 SS let @/ = '\V'.escape(<q-args>, '\')
+"command! -nargs=1 SS let @/ = '\V'.escape(<q-args>, '\')
 
 "------------------------------------------------------------
 " Mappings 
@@ -401,6 +404,13 @@ noremap <leader>[ :bp<return>
 noremap <leader>] :bn<return>
 " delete current buffer without closing window
 nnoremap <Leader>d :bp\|bd #<CR>
+
+" find marks
+nnoremap <Leader>m :<C-u>marks<CR>:normal! `
+" switch buffer
+nnoremap <Leader>b :ls<CR>:b<Space>
+"nnoremap <key> :undolist<CR>:u<Space>
+
 " show full path
 nnoremap <Leader>0 :echo expand('%:p')<CR>
 
