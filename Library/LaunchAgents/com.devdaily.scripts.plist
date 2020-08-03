@@ -65,9 +65,9 @@
 		</array>
 
 		<key>StandardErrorPath</key>
-		<string>/tmp/scripts.err</string>
+		<string>/var/log/scripts.err</string>
 
 		<key>StandardOutPath</key>
-		<string>/tmp/scripts.out</string>
+		<string>/var/log/scripts.out</string>
 	</dict>
 </plist>
