@@ -4,6 +4,8 @@ atk
 autoconf
 automake
 bash
+bdw-gc
+boost
 broot
 cairo
 clang-format
@@ -34,6 +36,7 @@ graphviz
 gsettings-desktop-schemas
 gtk+3
 gts
+guile
 harfbuzz
 hicolor-icon-theme
 htop
@@ -75,7 +78,6 @@ nss
 openblas
 openjdk
 openjpeg
-openssl
 openssl@1.1
 pango
 pcre
@@ -86,7 +88,6 @@ pkg-config
 plantuml
 poppler
 pylint
-python
 python@3.8
 qrencode
 qt
