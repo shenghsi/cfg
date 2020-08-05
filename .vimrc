@@ -109,6 +109,7 @@ hi! SpellRare gui=undercurl guisp=magenta
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
+" set term=xterm-256color
 set t_Co=256
 set background=dark
 " hemisu works with peppermint terminal theme
@@ -119,9 +120,13 @@ if $ITERM_PROFILE == 'solarized'
 else
 	"let colorname='molokai'
 	"let colorname='gruvbox'
-	let colorname='solarized'
+	" if the solarized background is not working, set the terminal background
+	" to solarized in preferences
+	let colorname='solarized8'
 endif
 execute 'let g:'.colorname.'_termcolors=256'
+" execute 'let g:'.colorname.'_termcolors=16'
+" syntax enable
 execute 'colorscheme '.colorname
 "autocmd BufEnter *.md colorscheme torte
 highlight Normal ctermbg=NONE

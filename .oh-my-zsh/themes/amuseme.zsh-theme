@@ -32,5 +32,5 @@ PROMPT=\
 '%(?.%{$fg[green]%}.%{$fg[red]%})%(!.#.$)%b '\
 '%{$reset_color%}'
 
-RPROMPT='$(ruby_prompt_info)'
+# RPROMPT='$(ruby_prompt_info)'
 
