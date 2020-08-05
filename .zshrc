@@ -203,4 +203,4 @@ unset __conda_setup
 
 
 
-source /Users/shxi/Library/Preferences/org.dystroy.broot/launcher/bash/br
+# source /Users/shxi/Library/Preferences/org.dystroy.broot/launcher/bash/br
