@@ -176,8 +176,9 @@ fg() {
 
 # set autosuggestion color based on iterm profile
 if [[ $ITERM_PROFILE = 'solarized' ]]; then
-    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
+    # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 fi
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 
 #fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
