@@ -40,12 +40,14 @@ let NERDTreeAutoDeleteBuffer = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "--- nathanaelkane/vim-indent-guides
+" Indent Guides is a plugin for visually displaying indent levels in Vim.
+" https://github.com/nathanaelkane/vim-indent-guides
 let indent_guides_auto_colors=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=236
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=240
 let g:indent_guides_enable_on_vim_startup=0
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
-hi IndentGuidesOdd ctermbg=236
-hi IndentGuidesEven ctermbg=240
 " IndentGuides maps
 nnoremap <silent> <Leader>i <Plug>IndentGuidesToggle
 
@@ -71,6 +73,7 @@ let g:ale_sign_error = "x"
 let g:ale_sign_warning = '!'
 
 let g:ale_fix_on_save = 1
+"let g:ale_enabled = 0
 " fixers
 let g:ale_fixers = {
 			\  '*':[],
@@ -269,6 +272,9 @@ exec 'set tabstop='    .s:tabwidth
 exec 'set shiftwidth=' .s:tabwidth
 exec 'set softtabstop='.s:tabwidth
 
+set cindent
+set cino=g0
+
 " python tabstop defined in /Users/shxi/.vim/ftplugin/python.vim
 "au BufNewFile,BufRead *.java set tabstop=4 expandtab shiftwidth=4 softtabstop=4
 "au BufNewFile,BufRead *.py set tabstop=8 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
@@ -294,7 +300,7 @@ set ruler
 
 " highlight the current line in every window and update the highlight as the cursor moves.
 set cursorline
-"hi CursorLine term=bold cterm=bold guibg=234 ctermbg=236
+hi CursorLine term=bold cterm=NONE ctermfg=NONE ctermbg=242
 
 " highlight applied only in the current window, use an autocmd
 "augroup CursorLine
@@ -437,12 +443,12 @@ nnoremap <Leader>f :NERDTreeToggle<Enter>
 "nnoremap <Leader>f :Vexplore<Enter>
 
 " insert mode map, auto adding curly brace pair
-inoremap '' ''<Esc>i
-inoremap "" ""<Esc>i
-inoremap () ()<Esc>i
-inoremap [] []<Esc>i
-inoremap {} {}<Esc>i
-"inoremap {<CR> {<CR>}<up><Esc>
+" inoremap '' ''<Esc>i
+" inoremap "" ""<Esc>i
+" inoremap () ()<Esc>i
+" inoremap [] []<Esc>i
+" inoremap {} {}<Esc>i
+inoremap {<CR> {<CR>}<up><Esc>
 "inoremap st<tab> std::string 
 "inoremap <c-x> <c-x><c-]>
 
