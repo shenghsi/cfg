@@ -112,6 +112,11 @@ hi! SpellRare gui=undercurl guisp=magenta
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
+" Enable true colors if available
+"if $COLORTERM  == 'truecolor'
+"	set termguicolors
+"endif
+
 " set term=xterm-256color
 set t_Co=256
 set background=dark
@@ -131,6 +136,10 @@ execute 'let g:'.colorname.'_termcolors=256'
 " execute 'let g:'.colorname.'_termcolors=16'
 " syntax enable
 execute 'colorscheme '.colorname
+"" Enable italics, Make sure this is immediately after colorscheme
+"" https://stackoverflow.com/questions/3494435/vimrc-make-comments-italic
+"highlight Comment cterm=italic gui=italic
+
 "autocmd BufEnter *.md colorscheme torte
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
