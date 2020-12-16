@@ -136,9 +136,9 @@ execute 'let g:'.colorname.'_termcolors=256'
 " execute 'let g:'.colorname.'_termcolors=16'
 " syntax enable
 execute 'colorscheme '.colorname
-"" Enable italics, Make sure this is immediately after colorscheme
-"" https://stackoverflow.com/questions/3494435/vimrc-make-comments-italic
-"highlight Comment cterm=italic gui=italic
+" Enable italics, Make sure this is immediately after colorscheme
+" https://stackoverflow.com/questions/3494435/vimrc-make-comments-italic
+highlight Comment cterm=italic gui=italic
 
 "autocmd BufEnter *.md colorscheme torte
 highlight Normal ctermbg=NONE
