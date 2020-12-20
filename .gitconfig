@@ -6,7 +6,5 @@
 [core]
 	excludesfile = /Users/shxi/.gitignore_global
 	pager = less -F -X
-[credential]
-	helper = osxkeychain
 [http]
 	sslVerify = false
