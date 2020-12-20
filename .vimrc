@@ -113,9 +113,10 @@ hi! SpellRare gui=undercurl guisp=magenta
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 " Enable true colors if available
-"if $COLORTERM  == 'truecolor'
-"	set termguicolors
-"endif
+"if has('termguicolors')
+if $COLORTERM  == 'truecolor'
+	set termguicolors
+endif
 
 " set term=xterm-256color
 set t_Co=256
