@@ -1,5 +1,22 @@
 #!/bin/bash
 
+# print colors 
+#for R in $(seq 0 20 255); do
+#    for G in $(seq 0 20 255); do
+#        for B in $(seq 0 20 255); do
+#            printf "\e[38;2;${R};${G};${B}m█\e[0m";
+#        done
+#    done
+#done
+
+# print a list of colors
+#color=16;
+#
+#while [ $color -lt 245 ]; do
+#echo -e "$color: \\033[38;5;${color}mhello\\033[48;5;${color}mworld\\033[0m"
+#((color++));
+#done
+
 # Tom Hale, 2016. MIT Licence.
 # Print out 256 colours, with each number printed in its corresponding colour
 # See http://askubuntu.com/questions/821157/print-a-256-color-test-pattern-in-the-terminal/821163#821163
