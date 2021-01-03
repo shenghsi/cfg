@@ -22,9 +22,12 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'gabrielelana/vim-markdown'
+"Plug 'gabrielelana/vim-markdown'
+Plug 'plasticboy/vim-markdown'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'dense-analysis/ale'
+Plug 'junegunn/goyo.vim'
+Plug 'reedes/vim-pencil'
 "Plug 'vifm/vifm'
 " Initialize plugin system
 call plug#end()
@@ -39,6 +42,10 @@ let NERDTreeAutoDeleteBuffer = 1
 "Automatically quit vim if NERDTree is last and only buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+"
+set conceallevel=2
+let g:vim_markdown_folding_level = 6
+let g:vim_markdown_folding_disabled = 1
 "--- nathanaelkane/vim-indent-guides
 " Indent Guides is a plugin for visually displaying indent levels in Vim.
 " https://github.com/nathanaelkane/vim-indent-guides
