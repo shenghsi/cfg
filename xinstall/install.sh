@@ -1,3 +1,4 @@
+#!/bin/sh
 # to install:
 # download this file
 # chmod +x install.sh
@@ -9,7 +10,7 @@ function cfg {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
 mkdir -p .config-backup
-cfg checkout
+cfg checkout -f
 if [ $? = 0 ]; then
   echo "Checked out config.";
   else
@@ -18,3 +19,4 @@ if [ $? = 0 ]; then
 fi;
 cfg checkout
 cfg config status.showUntrackedFiles no
+sudo tic xinstall/xterm-256color-italic
